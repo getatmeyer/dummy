@@ -5,11 +5,139 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 47.608013, lng: -122.335167},
     zoom: 12,
-    // center: myLatlng,
     streetViewControl: false,
-    mapTypeControl: false
+    mapTypeControl: false,
+    styles: [
+        {
+            "featureType": "poi.attraction",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "elementType": "geometry.stroke",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.government",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.medical",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "color": "#3e50ff"
+              },
+              {
+                "weight": 2
+              }
+            ]
+          },
+          {
+            "featureType": "poi.place_of_worship",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.school",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.sports_complex",
+            "stylers": [
+              {
+                "color": "#fdff12"
+              },
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.station.airport",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+        }
+            ]
     
   });
+
 
 var input = document.getElementById('pac-input');
 
@@ -62,136 +190,3 @@ var autocomplete = new google.maps.places.Autocomplete(input);
         });
     }
     
-
-
-// var styleControl = document.getElementById('style-selector-control');
-// var styles = {
-//     default: null,
-//     scheme: [
-//   {
-//     "featureType": "poi.attraction",
-//     "elementType": "labels.icon",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.business",
-//     "elementType": "geometry.fill",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.business",
-//     "elementType": "geometry.stroke",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.business",
-//     "elementType": "labels.icon",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.business",
-//     "elementType": "labels.text",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.business",
-//     "elementType": "labels.text.fill",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.business",
-//     "elementType": "labels.text.stroke",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.government",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.medical",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.park",
-//     "elementType": "labels.icon",
-//     "stylers": [
-//       {
-//         "color": "#3e50ff"
-//       },
-//       {
-//         "weight": 2
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.place_of_worship",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.school",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "poi.sports_complex",
-//     "stylers": [
-//       {
-//         "color": "#fdff12"
-//       },
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-//   },
-//   {
-//     "featureType": "transit.station.airport",
-//     "stylers": [
-//       {
-//         "visibility": "off"
-//       }
-//     ]
-// }
-//     ]}
