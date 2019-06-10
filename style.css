@@ -1,0 +1,48 @@
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+ #map {
+    height: 50%;
+    width: 600px;
+    margin-left: 40px;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .map-control {
+          background-color: #3E7AB2;
+          border: 1px solid #ccc;
+          box-shadow: 0 2px 2px rgba(39, 31, 13, 0.4);
+          font-family: 'Roboto','sans-serif';
+          margin: 10px;
+          display: none;
+          }
+  
+      h1 {
+          color:red;
+      }  
+
+      .controls:focus {
+        border-color: #4d90fe;
+      }
+
+      .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+        
+      }
+input {
+    margin-top: 15px;
+    width: 220px;
+    margin-left: 15px;
+}
