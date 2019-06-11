@@ -46,3 +46,12 @@ input {
     width: 220px;
     margin-left: 15px;
 }
+button {
+    color: white;
+    background-color: blue;
+    padding: 9px;
+    border-radius: 5px;
+}
+#radius {
+height: 40px;
+}

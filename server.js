@@ -1,3 +1,11 @@
+// var customLabel = {
+//     offLeash: {
+//       label: 'Off-leash'
+//     },
+//     leash: {
+//       label: 'on-leash'
+//     }
+//   };
 
 
 function initMap() {
