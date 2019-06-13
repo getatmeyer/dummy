@@ -9,7 +9,7 @@
 //   };
 
 var map;
-// var infowindow;
+var infowindow;
 // var markers = [];
 
 function initialize() {
@@ -17,11 +17,12 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: center,
     zoom: 12
+
   });
 
   var request = {
     location: center,
-    radius: 8047,
+    radius: 12000,
     types: ['park']
   };
   infowindow = new google.maps.InfoWindow();
@@ -44,21 +45,17 @@ function createMarker(place) {
   var placeLoc = place.geometry.location;
   var marker = new google.maps.Marker({
     map: map,
-    position: place.gemoetry.location
+    position: place.geometry.location
     
 
   });
-  console.log(createMarker, "Marker");
   
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+});
+
 }
-
-
-  // google.maps.event.addListener(marker, 'click', function() {
-    // infowindow.setContent(place.name);
-    // infowindow.open(map, this);
-// });
-
-
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
