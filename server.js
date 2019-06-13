@@ -48,6 +48,8 @@ function createMarker(place) {
     
 
   });
+  console.log(createMarker, "Marker");
+  
 }
 
 
