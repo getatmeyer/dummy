@@ -240,7 +240,7 @@ aiki.addListener('click', function() {
 
   var service = new google.maps.places.PlacesService(map);
 
-  service.nearbySearch(request);
+  service.nearbySearch(request, callback);
 
 }
 
