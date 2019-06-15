@@ -1,5 +1,10 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
+
+ * {
+  box-sizing: border-box;
+}
+
  #map {
     height: 50%;
     width: 600px;
@@ -46,9 +51,17 @@ input {
     width: 220px;
     margin-left: 15px;
 }
-button {
-    color: white;
-    background-color: blue;
-    padding: 9px;
-    border-radius: 5px;
+  
+
+.container {
+  position: relative;
+  width: 50%;
 }
+
+input {
+  text-decoration: none;
+  border:none;
+   background-color:transperant;
+   outline:none;
+}
+
