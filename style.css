@@ -63,5 +63,17 @@ input {
   border:none;
    background-color:transperant;
    outline:none;
+   position: absolute;
+   color: red;
 }
 
+#text {
+  /* position: relative; */
+  
+
+}
+form {
+  color: red;
+  position: relative;
+  left: 100px;
+}

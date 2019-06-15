@@ -21,7 +21,7 @@ function initialize() {
   var volunteer = new google.maps.Marker({
     position: {lat: 47.630028, lng: -122.3172377},
     map: map,
-    icon: 'https://doc-04-bo-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/u5v6kapgckli3rnc0bnpf5b4uvpn4j0p/1560585600000/10255844596544865388/*/1ItBSzogV6tYnP97HWuM0Qjb_WN08FFmE',
+    icon: 'on-leash.png',
   })
 
   // MARINA BEACH PARK
@@ -50,7 +50,7 @@ function initialize() {
  var denny = new google.maps.Marker({
   position: {lat: 47.6196688, lng: -122.3432826},
   map: map,
-  icon: 'https://doc-00-bo-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/fk9m38rmgm3pijspmo1i99an1lfgvq0s/1560585600000/10255844596544865388/*/14Kzs3MPEke3BDPyCVcovj2q27pKuR4AX',
+  icon: 'off-leash.png'
 
 })
 //Kinnear Park
@@ -102,7 +102,7 @@ var mangunson = new google.maps.Marker({
 
 // Marina infoWindow
  var infoWindow = new google.maps.InfoWindow({
-  content: '<p>Marina Beach Park</p><p>498 Admiral Way, Edmond, WA 98020</p><p>Off Leash Area</p>'
+  content: '<p>Marina Beach Park</p><p>498 Admiral Way, Edmond, WA 98020</p><p><Off Leash Area</p>'
 });
 
 //Discovery infoWindow
@@ -240,17 +240,17 @@ aiki.addListener('click', function() {
 
   var service = new google.maps.places.PlacesService(map);
 
-  service.nearbySearch(request, callback);
+  service.nearbySearch(request);
 
 }
 
 // function callback(results, status) {
 //   if (status = google.maps.places.PlacesServiceStatus.OK) {
-//     // for (var i = 0; i < results.length; i++) {
+//     for (var i = 0; i < results.length; i++) {
 //       createMarker(results[i]);
 //     }
 //   }
-// // }
+// }
 
 function createMarker(place) {
   var placeLoc = place.geometry.location;
@@ -264,13 +264,13 @@ function createMarker(place) {
   
 
   
-  // google.maps.event.addListener(marker, 'click', function() {
-    // infowindow.setContent(place.name + place.formatted_address);
-    // infowindow.setContent(place.formatted_address);
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(place.name + place.formatted_address);
+    infowindow.setContent(place.formatted_address);
 
 
-    // infowindow.open(map, this);
-// });
+    infowindow.open(map, this);
+});
 
 }
 
