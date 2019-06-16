@@ -3,7 +3,7 @@ var map;
 var infowindow;
 var request;
 var service;
-var markers = [];
+// var markers = [];
 
 function initialize() {
   var center = new google.maps.LatLng(47.608013, -122.335167);
@@ -216,19 +216,13 @@ aiki.addListener('click', function() {
   infoWindow10.open(map, mangunson);
 
  })
-//  var infoWindow1 = new google.maps.InfoWindow({
-//   content: '<p>Discovery Park</p><p>498 Admiral Way, Edmond, WA 98020</p><p>Off Leash Area</p>'
-// });
 
-// var infoWindow2 = new google.maps.InfoWindow({
-//   content: '<p>Volunteer Park</p><p>498 Admiral Way, Edmond, WA 98020</p><p>Off Leash Area</p>'
-// });
-  var request = {
-    location: center,
-    // fields: ['name', 'formatted_address'],
-    radius: 140000,
-    // types: ['park']
-  };
+  // var request = {
+  //   location: center,
+  //   // fields: ['name', 'formatted_address'],
+  //   radius: 140000,
+  //   // types: ['park']
+  // };
   infowindow = new google.maps.InfoWindow();
 
   var service = new google.maps.places.PlacesService(map);
