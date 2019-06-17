@@ -3,7 +3,7 @@
 <head><title>Google Maps</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>  
@@ -13,18 +13,44 @@
 
 
 
-<div style= "display: none">
+<!-- <div style= "display: none">
         <input id="pac-input"
                class="controls"
                type="text"
                placeholder="Enter a location">
-    </div>
-<div id="map"></div>
-  <div id="infowindow-content">
-            <span id="place-name" class="title"></span><br>
-            <strong>Place ID:</strong> <span id="place-id"></span><br>
-            <span id="place-address"></span>
- </div>
+    </div> -->
+<div id="legendContainer">
+    <div class="row">
+<div class="col-md-5">
+<!-- <div id="map"> -->
+<div class="card" style="width: 18rem;">
+        <img id="marker" src="marker.png" class="card-img-top" alt="marker">
+        <div class="card-body">
+          <h5 class="card-title">Park Locator</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Leash Area<img id ="purpleIcon" src="leash.png"></li>
+          <li class="list-group-item">Off-Leash Area<img id="blueIcon" src="off-leash.png"></li>
+        </ul>
+      </div>
+      </div>
+      <div class="col-md-5">
+            <div id="map"></div>
+            </div>
+            <img id="ladywalking" src="walkingdog.png" width="464" height="310">
+            <img id="manwalking" src="walkingdog2.png" width="464" height= "310">
+        </div>
+
+<!-- <div class="col-md-2"></div></div> -->
+
+
+
+  <!-- <div id="infowindow-content"> -->
+            <!-- <span id="place-name" class="title"></span><br> -->
+            <!-- <strong>Place ID:</strong> <span id="place-id"></span><br> -->
+            <!-- <span id="place-address"></span> -->
+ <!-- </div>
 
 
 
@@ -32,8 +58,8 @@
      
 
 
-<!-- Replace the value of the key parameter with your own API key. -->
-<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXF7d4aeywjAg_6B-Mweiy_PUttilBJ5M&libraries=places&callback=initMap" async defer></script> -->
+Replace the value of the key parameter with your own API key.
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXF7d4aeywjAg_6B-Mweiy_PUttilBJ5M&libraries=places&callback=initMap" async defer></script> -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCvOevoS_mSwOMP1b7rUFkz56N7_QQGGwA"></script>
 
 <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXF7d4aeywjAg_6B-Mweiy_PUttilBJ5M&libraries=places"></script> -->

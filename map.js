@@ -1,8 +1,8 @@
 
 var map;
 var infowindow;
-var request;
-var service;
+// var request;
+// var service;
 // var markers = [];
 
 function initialize() {
@@ -19,7 +19,7 @@ function initialize() {
     position: {lat: 47.630028, lng: -122.3172377},
     map: map,
     icon: 'leash.png',
-  })
+  });
 
   // MARINA BEACH PARK
  var marina = new google.maps.Marker({
@@ -27,34 +27,34 @@ function initialize() {
    map: map,
    icon: 'leash.png',
 
- })
+ });
 
  // DISCOVERY PARK
  var discovery = new google.maps.Marker({
   position: {lat: 47.657302, lng: -122.405496},
   map: map,
   icon: 'leash.png',
-})
+});
 //GOLDEN GARDEN PARK
  var golden = new google.maps.Marker({
   position: {lat: 47.6917517, lng: -122.4052799},
   map: map,
   icon: 'off-leash.png'
-})
+});
 //Denny PARK
  var denny = new google.maps.Marker({
   position: {lat: 47.6196688, lng: -122.3432826},
   map: map,
   icon: 'off-leash.png'
 
-})
+});
 //Kinnear Park
 var kinnear = new google.maps.Marker({
   position: {lat: 47.6269004, lng: -122.3697379},
   map: map,
   icon: 'off-leash.png',
 
-})
+});
 
 //JUDKINS Park
 var judkins = new google.maps.Marker({
@@ -62,21 +62,21 @@ var judkins = new google.maps.Marker({
   map: map,
   icon: 'leash.png',
 
-})
+});
 
 //SEWARD Park
 var seward = new google.maps.Marker({
   position: {lat: 47.5493908, lng: -122.2584997},
   map: map,
   icon: 'leash.png'
-})
+});
 
 //AIKI Park
 var aiki = new google.maps.Marker({
   position: {lat: 47.5790755, lng: -122.4136163},
   map: map,
   icon: 'leash.png'
-})
+});
 
 //Magnolia Park
 var magnolia = new google.maps.Marker({
@@ -84,14 +84,21 @@ var magnolia = new google.maps.Marker({
   map: map,
   icon: 'off-leash.png',
 
-})
+});
 //Mangnuson Park
 var mangunson = new google.maps.Marker({
   position: {lat: 47.6802077, lng: -122.2587839},
   map: map,
   icon: 'off-leash.png',
 
-})
+});
+//UNIVERSITY WASHINGTON LOCATION
+var university = new google.maps.Marker({
+  position: {lat: 47.6084705, lng: -122.3355466},
+  map: map,
+  icon: 'UW.png',
+
+});
 
 // Marina infoWindow
  var infoWindow = new google.maps.InfoWindow({
@@ -143,9 +150,14 @@ var infoWindow9 = new google.maps.InfoWindow({
   content: '<p>Magnolia Park</p><p>1461 Magnolia Blvd W, Seattle WA 981199</p><p>Off-Leash Area</p>'
 });
 
-// /Mangnuson Park infoWIndow
+// Mangnuson Park infoWIndow
 var infoWindow10 = new google.maps.InfoWindow({
   content: '<p>Mangnuson Park</p><p>7400 Sand Point Way NE, Seattle WA 98115</p><p> Off-Leash Area</p>'
+});
+
+// University Washington infoWindow
+var infoWIndow11 = new google.maps.InfoWindow({
+  content: '<p>Puget Sound Plaza</p><p>1325 4th Ave, Seattle WA 98101</p>'
 });
 
 //Marina click
@@ -153,69 +165,75 @@ var infoWindow10 = new google.maps.InfoWindow({
    infowindow.close();
    infoWindow.open(map, marina);
 
- })
+ });
 //Discovery click
  discovery.addListener('click', function() {
   infowindow.close();
   infoWindow1.open(map, discovery);
 
- })
+ });
 //Volunteer click
  volunteer.addListener('click', function() {
   infowindow.close();
   infoWindow2.open(map, volunteer);
 
- })
+ });
  //Golden Gardens click
  golden.addListener('click', function() {
   infowindow.close();
   infoWindow3.open(map, golden);
 
- })
+ });
 //Denny Park click
 denny.addListener('click', function() {
   infowindow.close();
   infoWindow4.open(map, denny);
 
- })
+ });
 //Kinnear Park click
 kinnear.addListener('click', function() {
   infowindow.close();
   infoWindow5.open(map, kinnear);
 
- })
+ });
  //Judkins Park click
 judkins.addListener('click', function() {
   infowindow.close();
   infoWindow6.open(map, judkins);
 
- })
+ });
  //Seward Park click
 seward.addListener('click', function() {
   infowindow.close();
   infoWindow7.open(map, seward);
 
- })
+ });
  //Aiki Park click
 aiki.addListener('click', function() {
   infowindow.close();
   infoWindow8.open(map, aiki);
 
- })
+ });
 
  //Magonlia Park click
  magnolia.addListener('click', function() {
   infowindow.close();
   infoWindow9.open(map, magnolia);
 
- })
+ });
 
  //Mangnuson Park click
  mangunson.addListener('click', function() {
   infowindow.close();
   infoWindow10.open(map, mangunson);
 
- })
+ });
+ //University Washington click
+ university.addListener('click', function() {
+   infowindow.close();
+   infoWIndow11.open(map, university);
+
+ });
 
   // var request = {
   //   location: center,
@@ -225,11 +243,12 @@ aiki.addListener('click', function() {
   // };
   infowindow = new google.maps.InfoWindow();
 
-  var service = new google.maps.places.PlacesService(map);
+  // var service = new google.maps.places.PlacesService(map);
 
-  service.nearbySearch(request);
+  // service.nearbySearch(request);
 
 }
+google.maps.event.addDomListener(window, 'load', initialize);
 
 // function callback(results, status) {
 //   if (status = google.maps.places.PlacesServiceStatus.OK) {
@@ -239,34 +258,27 @@ aiki.addListener('click', function() {
 //   }
 // }
 
-function createMarker(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
+// function createMarker(place) {
+  // var placeLoc = place.geometry.location;
+  // var marker = new google.maps.Marker({
+    // map: map,
+    // position: place.geometry.location
     
 
-  });
-
-  
-
-  
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name + place.formatted_address);
-    infowindow.setContent(place.formatted_address);
+  // });
 
 
-    infowindow.open(map, this);
-});
-
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
+  // google.maps.event.addListener(marker, 'click', function() {
+    // infowindow.setContent(place.name + place.formatted_address);
+    // infowindow.setContent(place.formatted_address);
 
 
+    // infowindow.open(map, this);
+// });
 
+// }
 
-
+// google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
