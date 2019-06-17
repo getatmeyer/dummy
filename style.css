@@ -2,6 +2,8 @@
    #map {
     height: 100%;
     width: 640px;
+    position: relative;
+    left: -4vw;
   }
   
   html, body {
@@ -57,12 +59,13 @@
   border-bottom: 1px solid lightgray;
   
 }
-
 #blueIcon, #purpleIcon {
   padding-left: 20px;
 }
 .card {
-  margin-left: 220px;
+  position: relative;
+  /* margin-left: 220px; */
+  left: 14vw;
 }
 #legendContainer {
 padding: 30px;
@@ -70,7 +73,7 @@ position: absolute;
 }
 #ladywalking {
  position: relative;
- left: 19vw;
+ left: 21vw;
  top: -11vh;
 }
 #manwalking { 
